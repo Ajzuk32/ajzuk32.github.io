@@ -1,2 +1,92 @@
-# ajzuk.github.io
-Discord bot
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anly - Twój asystent Discord</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo-container">
+            <img src="logo.png" alt="Anly Logo" class="nav-logo">
+            <div class="logo">Anly<span>.</span></div>
+        </div>
+        <div class="nav-right">
+            <div class="links">
+                <a href="#features">Funkcje</a>
+                <a href="#commands">Komendy</a>
+            </div>
+            <button id="theme-toggle" class="theme-switch" title="Przełącz motyw">
+                <i class="fas fa-moon"></i>
+            </button>
+            <a href="TWÓJ_LINK_ZAPROSZENIA" class="btn-small">Dodaj bota</a>
+        </div>
+    </nav>
+
+    <header>
+        <div class="hero">
+            <div class="hero-image-container">
+                <img src="logo.png" alt="Anly Bot" class="hero-logo">
+            </div>
+            
+            <div class="status-badge">● Online i gotowy do pomocy</div>
+            <h1>Poznaj <span>Anly</span></h1>
+            <p>Nowoczesny, szybki i estetyczny bot dla Twojej społeczności. Zarządzaj serwerem z klasą i lekkością dzięki zaawansowanej tarczy ochronnej.</p>
+            
+            <div class="hero-btns">
+                <a href="TWÓJ_LINK_ZAPROSZENIA" class="btn-primary"><i class="fab fa-discord"></i> Zaproś bota</a>
+                <a href="#features" class="btn-secondary">Zobacz funkcje</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="features" class="features">
+        <div class="card">
+            <i class="fas fa-shield-halved"></i>
+            <h3>Bezpieczeństwo</h3>
+            <p>Inteligentna tarcza Anly automatycznie wykrywa i blokuje zagrożenia na Twoim serwerze.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-bolt"></i>
+            <h3>Szybkość</h3>
+            <p>Zbudowany na najnowszych technologiach, aby każda komenda działała natychmiastowo.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-wand-magic-sparkles"></i>
+            <h3>Estetyka</h3>
+            <p>Piękne i czytelne wiadomości Embed, które idealnie pasują do Twojego serwera.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Anly Bot. Stworzone dla najlepszych społeczności.</p>
+    </footer>
+
+    <script>
+        const btn = document.getElementById("theme-toggle");
+        const icon = btn.querySelector("i");
+        const body = document.body;
+
+        if (localStorage.getItem("theme") === "dark") {
+            body.classList.add("dark-mode");
+            icon.classList.replace("fa-moon", "fa-sun");
+        }
+
+        btn.addEventListener("click", () => {
+            body.classList.toggle("dark-mode");
+            const isDark = body.classList.contains("dark-mode");
+            
+            if (isDark) {
+                icon.classList.replace("fa-moon", "fa-sun");
+                localStorage.setItem("theme", "dark");
+            } else {
+                icon.classList.replace("fa-sun", "fa-moon");
+                localStorage.setItem("theme", "light");
+            }
+        });
+    </script>
+</body>
+</html>
