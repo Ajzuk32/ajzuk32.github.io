@@ -21,7 +21,7 @@
         <h1>Anly Bot 🛡️</h1>
         <p>Nowoczesny bot do moderacji, systemu ticketów i muzyki. Zadbaj o porządek na swoim serwerze z Anly.</p>
         
-        <a href="TWÓJ_LINK_ZAPROSZENIA" class="btn" target="_blank">Zaproś Anly na serwer</a>
+        <a href="[TWÓJ_LINK_ZAPROSZENIA](https://discord.com/oauth2/authorize?client_id=1488879981236060311)" class="btn" target="_blank">Zaproś Anly na serwer</a>
 
         <div class="features">
             <div class="card">
