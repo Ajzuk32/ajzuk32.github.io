@@ -3,90 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anly - Twój asystent Discord</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Anly Bot | Discord Support & Music</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #1a1c1e; color: white; text-align: center; margin: 0; padding: 0; }
+        .container { padding: 100px 20px; }
+        h1 { color: #2563eb; font-size: 3rem; margin-bottom: 10px; }
+        p { color: #94a3b8; font-size: 1.2rem; max-width: 600px; margin: 0 auto 30px; }
+        .btn { background-color: #2563eb; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.1rem; transition: 0.3s; display: inline-block; }
+        .btn:hover { background-color: #1d4ed8; transform: translateY(-3px); }
+        .features { display: flex; justify-content: center; gap: 20px; margin-top: 50px; flex-wrap: wrap; }
+        .card { background: #24272a; padding: 20px; border-radius: 12px; width: 250px; border: 1px solid #334155; }
+        .card h3 { color: #2563eb; margin-top: 0; }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <h1>Anly Bot 🛡️</h1>
+        <p>Nowoczesny bot do moderacji, systemu ticketów i muzyki. Zadbaj o porządek na swoim serwerze z Anly.</p>
+        
+        <a href="TWÓJ_LINK_ZAPROSZENIA" class="btn" target="_blank">Zaproś Anly na serwer</a>
 
-    <nav>
-        <div class="logo-container">
-            <img src="logo.png" alt="Anly Logo" class="nav-logo">
-            <div class="logo">Anly<span>.</span></div>
-        </div>
-        <div class="nav-right">
-            <div class="links">
-                <a href="#features">Funkcje</a>
-                <a href="#commands">Komendy</a>
+        <div class="features">
+            <div class="card">
+                <h3>🎫 System Ticketów</h3>
+                <p>Zaawansowane wsparcie z archiwizacją zgłoszeń do logów.</p>
             </div>
-            <button id="theme-toggle" class="theme-switch" title="Przełącz motyw">
-                <i class="fas fa-moon"></i>
-            </button>
-            <a href="TWÓJ_LINK_ZAPROSZENIA" class="btn-small">Dodaj bota</a>
-        </div>
-    </nav>
-
-    <header>
-        <div class="hero">
-            <div class="hero-image-container">
-                <img src="logo.png" alt="Anly Bot" class="hero-logo">
+            <div class="card">
+                <h3>🛡️ Moderacja</h3>
+                <p>Szybkie kary (kick/ban) z pełną kontrolą hierarchii ról.</p>
             </div>
-            
-            <div class="status-badge">● Online i gotowy do pomocy</div>
-            <h1>Poznaj <span>Anly</span></h1>
-            <p>Nowoczesny, szybki i estetyczny bot dla Twojej społeczności. Zarządzaj serwerem z klasą i lekkością dzięki zaawansowanej tarczy ochronnej.</p>
-            
-            <div class="hero-btns">
-                <a href="TWÓJ_LINK_ZAPROSZENIA" class="btn-primary"><i class="fab fa-discord"></i> Zaproś bota</a>
-                <a href="#features" class="btn-secondary">Zobacz funkcje</a>
+            <div class="card">
+                <h3>🎶 Muzyka</h3>
+                <p>Odtwarzanie z SoundCloud i YouTube Music bez błędów.</p>
             </div>
         </div>
-    </header>
-
-    <section id="features" class="features">
-        <div class="card">
-            <i class="fas fa-shield-halved"></i>
-            <h3>Bezpieczeństwo</h3>
-            <p>Inteligentna tarcza Anly automatycznie wykrywa i blokuje zagrożenia na Twoim serwerze.</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-bolt"></i>
-            <h3>Szybkość</h3>
-            <p>Zbudowany na najnowszych technologiach, aby każda komenda działała natychmiastowo.</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-wand-magic-sparkles"></i>
-            <h3>Estetyka</h3>
-            <p>Piękne i czytelne wiadomości Embed, które idealnie pasują do Twojego serwera.</p>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Anly Bot. Stworzone dla najlepszych społeczności.</p>
-    </footer>
-
-    <script>
-        const btn = document.getElementById("theme-toggle");
-        const icon = btn.querySelector("i");
-        const body = document.body;
-
-        if (localStorage.getItem("theme") === "dark") {
-            body.classList.add("dark-mode");
-            icon.classList.replace("fa-moon", "fa-sun");
-        }
-
-        btn.addEventListener("click", () => {
-            body.classList.toggle("dark-mode");
-            const isDark = body.classList.contains("dark-mode");
-            
-            if (isDark) {
-                icon.classList.replace("fa-moon", "fa-sun");
-                localStorage.setItem("theme", "dark");
-            } else {
-                icon.classList.replace("fa-sun", "fa-moon");
-                localStorage.setItem("theme", "light");
-            }
-        });
-    </script>
+    </div>
 </body>
 </html>
